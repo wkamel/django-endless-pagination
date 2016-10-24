@@ -43,12 +43,12 @@ def get_page_number_from_request(
     then *default* number is returned.
     """
     # @wkamel - removed depreciated usage of request.REQUEST and replaced with GET and POST
-    querysting_value = default
+    querystring_value = default
     if querystring_key in request.GET:
-        querysting_value = request.GET[querystring_key]
+        querystring_value = request.GET[querystring_key]
         
     if querystring_key in request.POST:
-        querysting_value = request.POST[querystring_key]
+        querystring_value = request.POST[querystring_key]
     
     return querystring_value
 
